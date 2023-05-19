@@ -1,5 +1,12 @@
 function minDate(dates) {
-  //write you code here
+  const minDate = dates.reduce((a, b) => {
+    const dateA = new Date(a);
+    const dateB = new Date(b);
+
+    return dateA < dateB ? a : b;
+  });
+
+  return minDate;
 }
 
 // Do not change the code
